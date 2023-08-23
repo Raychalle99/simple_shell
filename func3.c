@@ -1,6 +1,5 @@
 #include "shell.h"
-​
-​
+
 /**
  * _fork - split
  * @buffr: pointer
@@ -10,15 +9,14 @@
  *
  * Return: nothing
  */
-​
-​
+
 void _fork(char *buffr, char **cmd, char **argv, int round)
 {
 	int y, compl;
 	pid_t _pid;
 	struct stat st;
 	char *str;
-​
+
 	str = _itoa(round);
 	if (cmd[0] != NULL)
 	{
@@ -51,8 +49,7 @@ void _fork(char *buffr, char **cmd, char **argv, int round)
 	free(buffr);
 	free(cmd);
 }
-​
-​
+
 /**
  * _p_error - print error
  * @argv: argv[0]
@@ -61,8 +58,7 @@ void _fork(char *buffr, char **cmd, char **argv, int round)
  *
  * Return: 0
  */
-​
-​
+
 int *_p_error(char *argv, char *str, char *cmd)
 {
 	write(STDERR_FILENO, argv, _str_len(argv));
@@ -71,26 +67,24 @@ int *_p_error(char *argv, char *str, char *cmd)
 	write(STDERR_FILENO, ": ", 2);
 	write(STDERR_FILENO, cmd, _str_len(cmd));
 	write(STDERR_FILENO, ": nothing \n", 12);
-​
+
 	return (0);
 }
-​
-​
+
 /**
  * _getline - input
  * @void: parameter input
  *
  * Return: buffer
  */
-​
-​
+
 char *_getline(void)
 {
 	char *buffr = NULL;
 	size_t size = 0;
 	ssize_t ops;
 	int i = 0;
-​
+
 	ops = getline(&buffr, &size, stdin);
 	if (!buffr)
 	{
@@ -121,16 +115,14 @@ char *_getline(void)
 	}
 	return (buffr);
 }
-​
-​
+
 /**
  * _sig_handler - signal for press ctrl + D
  * @signum: void input
  *
  * Return: nothing
  */
-​
-​
+
 void _sig_handler(int signum)
 {
 	(void) signum;

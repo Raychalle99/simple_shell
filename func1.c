@@ -1,6 +1,5 @@
 #include "shell.h"
 
-
 /**
  * _env1 - environment
  * @buffr: string.
@@ -8,7 +7,6 @@
  *
  * Return: 1 (Success) 0 (Failure)
  */
-
 
 int _env1(char *buffr, char **cmd)
 {
@@ -36,7 +34,6 @@ int _env1(char *buffr, char **cmd)
 	return (1);
 }
 
-
 /**
  * _exit1 - exit
  * @buffr: string.
@@ -44,7 +41,6 @@ int _env1(char *buffr, char **cmd)
  *
  * Return: nothing.
  */
-
 
 void _exit1(char *buffr, char **cmd)
 {
@@ -59,14 +55,12 @@ void _exit1(char *buffr, char **cmd)
 		}
 }
 
-
 /**
  * _path - get path
  * @cmd: get command
  *
  * Return: file
  */
-
 
 char  *_path(char *cmd)
 {
@@ -101,7 +95,6 @@ char  *_path(char *cmd)
 	return (file);
 }
 
-
 /**
  * _find - found directory
  * @foldr: ptr 2 ptr.
@@ -109,7 +102,6 @@ char  *_path(char *cmd)
  *
  * Return: cmd
  */
-
 
 char *_find(char **foldr, char *cmd)
 {
@@ -149,14 +141,12 @@ char *_find(char **foldr, char *cmd)
 	return (cmd);
 }
 
-
 /**
  * _get_env - get variables enviroment
  * @ch: parameter in
  *
  * Return: cmd
  */
-
 
 char *_get_env(char *ch)
 {
@@ -186,5 +176,3 @@ char *_get_env(char *ch)
 	}
 	return (final_path);
 }
-
-

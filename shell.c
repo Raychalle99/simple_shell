@@ -1,6 +1,5 @@
 #include "shell.h"
-​
-​
+
 /**
  * main - shell
  * @argc: unused
@@ -8,13 +7,12 @@
  *
  * Return: 0
  */
-​
-​
+
 int main(__attribute__((unused)) int argc, char *argv[])
 {
 	char *buffr = NULL, **cmd;
 	int ptr, i, round = 0;
-​
+
 	signal(SIGINT, _sig_handler);
 	while (1)
 	{

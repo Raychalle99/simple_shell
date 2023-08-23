@@ -1,13 +1,11 @@
  #include "shell.h"
 
-
 /**
  * _str_dup - copy of the string.
  * @str: array
  *
  * Return: string copied.
  */
-
 
 char *_str_dup(char *str)
 {
@@ -28,7 +26,6 @@ char *_str_dup(char *str)
 	return (fx);
 }
 
-
 /**
  * _str_cat - concatenate two strings
  * @dest: character to print
@@ -37,10 +34,8 @@ char *_str_dup(char *str)
  *Return: String concatenate.
  */
 
-
 char *_str_cat(char *dest, char *src)
 {
-
 	int i = 0, c = 0, n = 0;
 
 	while (dest[i] != '\0')
@@ -60,14 +55,12 @@ char *_str_cat(char *dest, char *src)
 	return (dest);
 }
 
-
 /**
  * _str_len - length of a string
  * @s: character to print
  *
  *Return: i
  */
-
 
 int _str_len(char *s)
 {
@@ -79,7 +72,6 @@ int _str_len(char *s)
 	return (i);
 }
 
-
 /**
  * _str_cmp - String comparate
  * @s1: String One
@@ -87,7 +79,6 @@ int _str_len(char *s)
  *
  *Return: difference of two string
  */
-
 
 int _str_cmp(char *s1, char *s2)
 {
@@ -99,7 +90,6 @@ int _str_cmp(char *s1, char *s2)
 	return (s1[i] - s2[i]);
 }
 
-
 /**
  * _str_cpy - copy a string.
  * @dest: Array Copied
@@ -107,7 +97,6 @@ int _str_cmp(char *s1, char *s2)
  *
  * Return: the string copied.
  */
-
 
 char *_str_cpy(char *dest, char *src)
 {
@@ -121,5 +110,3 @@ char *_str_cpy(char *dest, char *src)
 	return (dest);
 
 }
-
-
